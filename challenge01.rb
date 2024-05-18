@@ -24,7 +24,7 @@ puts "#{time[:that]} #{example[2]} #{example[1]} #{example[0]}#{time[:period]}"
 
 
 # Required Sentence
-puts "#{carl[:words][2].capitalize} #{sagan[0][:are]} #{sagan[0]['A']} #{sagan[1]['waaaaaay']} #{carl[:words][1]} #{sagan[1][:th3]} #{carl[:toast]} #{carl[:words][0]} #{sagan[3][2][0]} #{sagan[2]}."
+puts "#{carl[:words][2].capitalize} #{sagan[0][:are]} #{sagan[0]['A']} #{sagan[1]['waaaaaay']} #{carl[:words][1]} #{sagan[1][:th3]} #{carl[:toast]} #{carl[:words][0]} #{sagan[3][2][0]} #{sagan[2]}#{carl[:punctuation][1]}"
 
 # 2) Create an array of hashes named ‘ghosts’ to hold the following information:
 # Inky is 4 years old, loves reindeers and has 25 dollars in the bank.
@@ -68,7 +68,7 @@ end
 # 4) Using data from the city's open data set figure out how many of our trees may die now that the Emerald Ash Borer has been found here. In other words, how many Ash trees do we have in the city? 
 
 # Load the subset of tree data first for testing
-url = 'https://data.winnipeg.ca/resource/d3jk-hb6j.json'
+url = 'https://data.winnipeg.ca/resource/d3jk-hb6j.json?%24limit=306000'
 uri = URI(url)
 response = Net::HTTP.get(uri)
 trees = JSON.parse(response)
